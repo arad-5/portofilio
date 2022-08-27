@@ -1,9 +1,9 @@
 const Intro = () => {
     return (
-        <header className="flex items-center flex-col h-[200vh] w-full">
-            <h1 className="font-semibold border text-left text-3xl">
+        <header className="flex h-[200vh] w-full flex-col items-center">
+            <h1 className="border text-left text-3xl font-semibold">
                 <span className="text-5xl">Hi,</span> <br /> Im{" "}
-                <strong className="font-semibold text-4xl">
+                <strong className="text-4xl font-semibold">
                     Arad Taghikhani
                 </strong>
                 <br /> front-end web developer
