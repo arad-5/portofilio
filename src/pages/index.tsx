@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+//components
+import Cube from "../components/cube/Cube";
+import Intro from "../components/sections/intro";
+
 const Home: NextPage = () => {
     return (
         <div>
@@ -13,10 +17,8 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
-                <header className="text-red-500">
-                    <h1>Hi, Im Arad Taghikhani front-end web developer</h1>
-                </header>
+            <main className="h-screen flex justify-center items-center">
+                <Cube>{[<Intro key="header" />, <Intro key="header" />]}</Cube>
             </main>
         </div>
     );
