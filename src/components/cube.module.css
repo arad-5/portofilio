@@ -1,0 +1,53 @@
+.scene {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid #ccc;
+    perspective: 50vw;
+}
+
+.cube {
+    transform-style: preserve-3d;
+}
+
+.cube__face {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cube__face:nth-child(1) {
+    background: hsla(300, 100%, 50%, 0.7);
+}
+
+.cube__face:nth-child(2) {
+    transform-origin: left;
+    transform: rotateY(90deg);
+    background: hsla(0, 100%, 50%, 0.7);
+}
+.cube__face:nth-child(3) {
+    transform: translateZ(-100vw);
+    background: hsla(60, 100%, 50%, 0.7);
+}
+.cube__face:nth-child(4) {
+    transform-origin: right;
+    transform: rotateY(-90deg);
+    background: hsla(120, 100%, 50%, 0.7);
+}
+.cube__face:nth-child(5) {
+    height: 100vw;
+    width: 100vw;
+    transform-origin: left;
+    transform: rotate(90deg) translateY(-50vw) translateX(-50vw) rotateY(90deg);
+    background: hsla(180, 100%, 50%, 0.7);
+}
+
+.cube__face:nth-child(6) {
+    height: 100vw;
+    width: 100vw;
+    bottom: 0;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    background: hsla(240, 100%, 50%, 0.7);
+}

@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Cube from "../components/Cube";
 
 const Home: NextPage = () => {
     return (
@@ -13,10 +14,36 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main>
-                <header className="text-red-500">
-                    <h1>Hi, Im Arad Taghikhani front-end web developer</h1>
-                </header>
+            <main className="h-screen flex justify-center items-center">
+                <Cube>
+                    {[
+                        <header key="header">
+                            <h1>
+                                Hi, Im Arad Taghikhani front-end web developer
+                            </h1>
+                        </header>,
+                        <header key="headerr">
+                            <h1>
+                                Hi, Im Arad Taghikhani front-end web developer
+                            </h1>
+                        </header>,
+                        <header key="header">
+                            <h1>
+                                Hi, Im Arad Taghikhani front-end web developer
+                            </h1>
+                        </header>,
+                        <header key="headerr">
+                            <h1>
+                                Hi, Im Arad Taghikhani front-end web developer
+                            </h1>
+                        </header>,
+                        <header key="header">
+                            <h1>
+                                Hi, Im Arad Taghikhani front-end web developer
+                            </h1>
+                        </header>,
+                    ]}
+                </Cube>
             </main>
         </div>
     );
