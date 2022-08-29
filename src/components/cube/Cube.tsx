@@ -9,11 +9,10 @@ const Face = ({ children }: { children?: JSX.Element }) => (
 );
 
 const Cube = ({ children }: Props) => {
-    console.log(React.Children.map(children, (child) => child));
     return (
         <div className={`${styles.scene} h-screen w-screen overflow-hidden`}>
             <div
-                className={`${styles.cube} h-screen w-screen fixed left-0 top-0 transition-transform`}
+                className={`${styles.cube} fixed left-0 top-0 h-screen w-screen transition-transform`}
             >
                 {children.map((child, i) => (
                     <Face key={i}>{child}</Face>

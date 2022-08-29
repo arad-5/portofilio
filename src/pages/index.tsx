@@ -1,12 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import getSkills from "../api/getSkills";
+import request from "../api/requst";
 
 //components
 import Cube from "../components/cube/Cube";
 import Intro from "../components/sections/intro";
 import Skills from "../components/sections/skills";
 
-const Home: NextPage = () => {
+//types
+import { Skill } from "../api/types/Skill";
+import { useEffect } from "react";
+type Props = {
+    skills: Skill[];
+};
+const Home: NextPage<Props> = ({ skills }) => {
     return (
         <div>
             <Head>
@@ -23,7 +31,7 @@ const Home: NextPage = () => {
                     {[
                         <main key="header">
                             <Intro />
-                            <Skills />
+                            <Skills skills={skills} />
                         </main>,
                     ]}
                 </Cube>
@@ -33,3 +41,13 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+    const skills = await getSkills();
+
+    return {
+        props: {
+            skills,
+        },
+    };
+};
