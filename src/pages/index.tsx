@@ -17,8 +17,14 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="h-screen flex justify-center items-center">
-                <Cube>{[<Intro key="header" />, <Intro key="header" />]}</Cube>
+            <main>
+                <Cube>
+                    {[
+                        <main key="header">
+                            <Intro />
+                        </main>,
+                    ]}
+                </Cube>
             </main>
         </div>
     );

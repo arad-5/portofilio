@@ -1,38 +1,41 @@
 .scene {
     width: 100vw;
     height: 100vh;
-    perspective: 50vw;
+    perspective: 70vw;
 }
 
 .cube {
     transform-style: preserve-3d;
+    transform: translateZ(-50vw);
 }
 
 .cube__face {
-    position: absolute;
     width: 100vw;
     height: 100vh;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid black;
+    position: absolute;
+    border: 1px solid #000;
 }
 
+.cube__face:nth-child(1) {
+    transform: translateZ(50vw);
+    z-index: 100;
+}
 .cube__face:nth-child(2) {
     transform-origin: left;
-    transform: rotateY(90deg);
+    transform: rotateY(-90deg) translateX(-50vw);
 }
 .cube__face:nth-child(3) {
-    transform: translateZ(-100vw);
+    transform-origin: center;
+    transform: translateZ(-50vw) rotateY(180deg);
 }
 .cube__face:nth-child(4) {
     transform-origin: right;
-    transform: rotateY(-90deg);
+    transform: rotateY(90deg) translateX(50vw);
 }
 .cube__face:nth-child(5) {
     height: 100vw;
     width: 100vw;
-    transform-origin: left;
-    transform: rotate(90deg) translateY(-50vw) translateX(-50vw) rotateY(90deg);
+    transform: rotateX(90deg) translateZ(50vw);
 }
 
 .cube__face:nth-child(6) {
@@ -40,5 +43,5 @@
     width: 100vw;
     bottom: 0;
     transform-origin: bottom;
-    transform: rotateX(90deg);
+    transform: rotateX(90deg) translatey(50vw);
 }
