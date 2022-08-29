@@ -4,6 +4,7 @@ import Head from "next/head";
 //components
 import Cube from "../components/cube/Cube";
 import Intro from "../components/sections/intro";
+import Skills from "../components/sections/skills";
 
 const Home: NextPage = () => {
     return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
                     {[
                         <main key="header">
                             <Intro />
+                            <Skills />
                         </main>,
                     ]}
                 </Cube>

@@ -6,7 +6,25 @@
         font-family: yapari;
         src: url(../assets/fonts/Yapari.ttf);
     }
+    .yapari-bold {
+        font-variation-settings: "wght" 700;
+    }
+    .yapari-bold-widest {
+        font-variation-settings: "wght" 700, "wdth" 150;
+    }
+    .yapari-bold-wide {
+        font-variation-settings: "wght" 700, "wdth" 103;
+    }
     body {
         overflow: hidden;
+    }
+    .font-wide {
+        font-variation-settings: "wdth" 103;
+    }
+    .font-widest {
+        font-variation-settings: "wdth" 150;
+    }
+    .dark {
+        @apply text-white;
     }
 }
