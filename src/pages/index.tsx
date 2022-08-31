@@ -10,9 +10,9 @@ import Skills from "../components/sections/skills";
 
 //types
 import { Skill } from "../api/types/Skill";
-import { useEffect } from "react";
+
 type Props = {
-    skills: Skill[];
+    skills: Skill[] | [];
 };
 const Home: NextPage<Props> = ({ skills }) => {
     return (
@@ -43,11 +43,11 @@ const Home: NextPage<Props> = ({ skills }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-    const skills = await getSkills();
+    // const skills = await getSkills();
 
     return {
         props: {
-            skills,
+            skills: [],
         },
     };
 };
