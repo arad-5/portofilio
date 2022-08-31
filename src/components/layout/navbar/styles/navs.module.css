@@ -1,0 +1,32 @@
+/* .scene {
+    perspective: 300px;
+}
+.cube {
+    transform-style: preserve-3d;
+}
+.face:nth-child(2) {
+    transform: translateZ(-8em);
+}
+.face:nth-child(3) {
+    height: 8em;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+}
+.face:nth-child(4) {
+    height: 8em;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+}
+.face:nth-child(5) {
+    width: 8em;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+.face:nth-child(6) {
+    width: 8em;
+    transform-origin: right;
+    right: 0;
+    transform: rotateY(-90deg);
+}
+.navs {
+} */

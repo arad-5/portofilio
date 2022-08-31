@@ -1,0 +1,35 @@
+.button {
+    perspective: 300px;
+    transition: perspective 150ms;
+    @apply bg-white dark:bg-black;
+}
+.button:hover {
+    perspective: 200px;
+}
+.cube {
+    transform-style: preserve-3d;
+}
+
+.face:nth-child(2) {
+    transform: translateZ(-6em);
+}
+.face:nth-child(3) {
+    transform-origin: top;
+    height: 6em;
+    transform: rotateX(-90deg);
+}
+.face:nth-child(4) {
+    transform-origin: bottom;
+    height: 6em;
+    transform: rotateX(90deg);
+}
+.face:nth-child(5) {
+    transform-origin: right;
+    width: 6em;
+    transform: rotatey(-90deg);
+}
+.face:nth-child(6) {
+    transform-origin: left;
+    width: 6em;
+    transform: rotatey(90deg);
+}

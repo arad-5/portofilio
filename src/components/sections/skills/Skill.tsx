@@ -10,7 +10,7 @@ const Skill = ({ skill }: Props) => {
             <img
                 src={skill.image.url}
                 alt={`${skill.name} logo`}
-                className="sm:h-20 sm:w-20 h-12 w-12"
+                className="h-12 w-12 sm:h-20 sm:w-20"
             />
             <div>
                 <h3 className="text-xl sm:text-3xl">{skill.name}</h3>
