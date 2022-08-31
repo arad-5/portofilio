@@ -3,11 +3,9 @@ import Skill from "./Skill";
 
 //types
 type Props = {
-    skills: SkillType[];
+    skills: SkillType[] | [];
 };
 const index = ({ skills }: Props): JSX.Element => {
-    console.log(skills);
-
     return (
         <section className="dark h-screen bg-black p-10">
             <div className="container mx-auto">

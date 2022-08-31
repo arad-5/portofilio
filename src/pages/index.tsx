@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import getSkills from "../api/getSkills";
+// import getSkills from "../api/getSkills";
 import request from "../api/requst";
 
 //components

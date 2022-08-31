@@ -1,18 +1,18 @@
 import styles from "./button.module.css";
 
 type Props = {
-    children: string;
-    handleClick?: () => void;
+    children: string | JSX.Element;
+    onClick?: () => void;
     href?: string;
+    additionalClass?: string;
 };
 
-const Button = ({ children }: Props) => {
+const Button = ({ children, onClick, additionalClass }: Props) => {
     return (
-        <button className={`${styles.button} text-lg`}>
+        <button className={`${styles.button} h-full text-lg`} onClick={onClick}>
             <div
-                className={`${styles.cube} relative flex h-[3em] w-full items-center px-8 text-center`}
+                className={`${styles.cube} relative flex h-full w-full items-center text-center ${additionalClass}`}
             >
-                {children}
                 <span
                     className={`${styles.face} absolute left-0 top-0 h-full w-full border border-neutral-400`}
                 ></span>
@@ -31,6 +31,7 @@ const Button = ({ children }: Props) => {
                 <span
                     className={`${styles.face} absolute left-0 top-0 h-full w-full border border-neutral-400`}
                 ></span>
+                {children}
             </div>
         </button>
     );
